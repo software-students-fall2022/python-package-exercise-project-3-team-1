@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "e38cb2ff7dbae6efff334b2b10aebdcddcd9d3949e8b8ceb7d03a8c0f402a693"
+
         },
         "pipfile-spec": 6,
         "requires": {
@@ -24,17 +24,7 @@
             "markers": "python_version >= '3.5'",
             "version": "==22.1.0"
         },
-        "examplepackagefb1258": {
-            "editable": true,
-            "path": "."
-        },
-        "exceptiongroup": {
-            "hashes": [
-                "sha256:2ac84b496be68464a2da60da518af3785fff8b7ec0d090a581604bc870bdee41",
-                "sha256:affbabf13fb6e98988c38d9c5650e701569fe3c1de3233cfb61c5f33774690ad"
-            ],
-            "markers": "python_version < '3.11'",
-            "version": "==1.0.0"
+
         },
         "iniconfig": {
             "hashes": [
