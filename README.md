@@ -76,18 +76,17 @@ functions.print_prompt(add, 5, 10)
 
 ## How to install and use this package
 
-Try [installing and using your package](https://packaging.python.org/en/latest/tutorials/packaging-projects/#installing-your-newly-uploaded-package) in a separate Python project:
+Try [installing and using our package](https://packaging.python.org/en/latest/tutorials/packaging-projects/#installing-your-newly-uploaded-package) in a separate Python project:
 
-1. Create a `pipenv`-managed virtual environment and install the latest version of your package installed: `pipenv install -i https://test.pypi.org/simple/ examplepackagefb1258==0.0.7`. (Note that if you've previously created a `pipenv` virtual environment in the same directory, you may have to delete the old one first. Find out where it is located with the `pipenv --venv` command.)
-1. Activate the virtual environment: `pipenv shell`.
-1. Create a Python program file that imports your package and uses it, e.g. `from examplepackagefb1258 import wisdom` and then `print(wisdom.get())` (replace `wisdom` and `get()` with any module name and function that exists in your package) .
-1. Run the program: `python3 my_program_filename.py`.
-1. Exit the virtual environment: `exit`.
+1. Create a `pipenv`-managed virtual environment and install the latest version of our package: `pipenv install -i https://pypi.org/project/arithmeticTrainer/`. (Note that if you've previously created a `pipenv` virtual environment in the same directory, you may have to delete the old one first. Find out where it is located with the `pipenv --venv` command.)
+2. Activate the virtual environment: `pipenv shell`.
+3. Navigate to the team1ArithmeticTrainer folder and run the program: `python3 __main__.py`.
+4. Exit the virtual environment: `exit`.
 
 Try running the package directly:
 
 1. Create and activate up the `pipenv` virtual environment as before.
-2. Run the package directly from the command line: `python3 -m examplepackagefb1258`. This should run the code in the `__main__.py` file.
+2. Navigate to the src directory `cd src` and run the package directly from the command line: `python3 -m team1ArithmeticTrainer`. This should run the code in the `__main__.py` file.
 3. Exit the virtual environment.
 
 ## How to run unit tests
