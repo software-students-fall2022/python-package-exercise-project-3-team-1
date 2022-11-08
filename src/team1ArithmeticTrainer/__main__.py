@@ -8,6 +8,9 @@ def main():
             print("Correct")
         else:
             print("Incorrect")
+        again = input("Another question? (Y/N): ")
+        if(again != "Y"):
+            break
 
 if __name__ == "__main__":
     main()
