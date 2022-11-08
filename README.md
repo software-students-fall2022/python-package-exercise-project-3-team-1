@@ -72,7 +72,7 @@ The print_prompt function takes three parameters (question, a, b) and prompts th
 from team1ArithmeticTrainer import functions
 functions.print_prompt(add, 5, 10)
 ```
-[Program utilizing all functions (Note some of the above functions are auxiliary functions)](https://github.com/software-students-fall2022/python-package-exercise-project-3-team-1/blob/main/src/team1ArithmeticTrainer/__main__.py)
+[Program utilizing all functions (Note some of the above functions are auxiliary functions)](https://github.com/software-students-fall2022/python-package-exercise-project-3-team-1/tree/main/src/team1ArithmeticTrainer/example.py)
 
 ## How to install and use this package
 
@@ -80,7 +80,7 @@ Try [installing and using our package](https://packaging.python.org/en/latest/tu
 
 1. Create a `pipenv`-managed virtual environment and install the latest version of our package: `pipenv install -i https://pypi.org/project/arithmeticTrainer/`. (Note that if you've previously created a `pipenv` virtual environment in the same directory, you may have to delete the old one first. Find out where it is located with the `pipenv --venv` command.)
 2. Activate the virtual environment: `pipenv shell`.
-3. Navigate to the team1ArithmeticTrainer folder and run the program: `python3 __main__.py`.
+3. Navigate to the team1ArithmeticTrainer directory `cd team1ArithmeticTrainer` and run the program from the command line: `python3 __main__.py`.
 4. Exit the virtual environment: `exit`.
 
 Try running the package directly:
