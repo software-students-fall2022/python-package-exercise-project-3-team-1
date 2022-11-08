@@ -169,28 +169,28 @@ class Tests:
     def test_print_prompt(self, capfd):
         result = functions.print_prompt("add", 5, 10)
         out, err = capfd.readouterr()
-        assert out == "What is the answer to the following question?\n5 + 10 = "
+        assert out == "What is the answer to the following question?\n5 + 10 = \n"
 
         result = functions.print_prompt("subtract", 10, 5)
         out, err = capfd.readouterr()
-        assert out == "What is the answer to the following question?\n10 - 5 = "
+        assert out == "What is the answer to the following question?\n10 - 5 = \n"
 
         result = functions.print_prompt("multiply", 3, 4)
         out, err = capfd.readouterr()
-        assert out == "What is the answer to the following question?\n3 * 4 = "
+        assert out == "What is the answer to the following question?\n3 * 4 = \n"
 
         result = functions.print_prompt("divide", 10, 5)
         out, err = capfd.readouterr()
-        assert out == "What is the answer to the following question?\n10 / 5 = "
+        assert out == "What is the answer to the following question?\n10 / 5 = \n"
 
         result = functions.print_prompt("sqr_root", 25, 2)
         out, err = capfd.readouterr()
-        assert out == "What is the answer to the following question?\n√25 = "
+        assert out == "What is the answer to the following question?\n√25 = \n"
 
         result = functions.print_prompt("modulus", 15, 4)
         out, err = capfd.readouterr()
-        assert out == "What is the answer to the following question?\n15 % 4 = "
+        assert out == "What is the answer to the following question?\n15 % 4 = \n"
 
         result = functions.print_prompt("cube_root", 125, 2)
         out, err = capfd.readouterr()
-        assert out == "What is the answer to the following question?\n∛125 = "
+        assert out == "What is the answer to the following question?\n∛125 = \n"
