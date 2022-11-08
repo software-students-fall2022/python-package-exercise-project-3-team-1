@@ -15,6 +15,13 @@ def checkPerfectCube(num):
                 return i
     return -1
 
+def getFactors(num):
+    factors = []
+    if num>0:
+        for i in range(1, num+1):
+            if num % i == 0:
+                factors.append(i)
+        return factors
 
 def add(a, b):
     return a + b
@@ -54,7 +61,7 @@ def generate_question():
         return question, a, b, ans
     elif question == 'subtract':
         a = random.randint(1, 100)
-        b = random.randint(1, 100)
+        b = random.randint(1, a)
         ans = subtract(a, b)
         return question, a, b, ans
     elif question == 'multiply':
@@ -64,7 +71,8 @@ def generate_question():
         return question, a, b, ans
     elif question == 'divide':
         a = random.randint(1, 100)
-        b = random.randint(1, 100)
+        factors = getFactors(a)
+        b = random.choice(factors)
         ans = divide(a, b)
         return question, a, b, ans
     elif question == 'sqr_root':

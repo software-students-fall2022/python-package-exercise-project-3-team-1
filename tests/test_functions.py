@@ -63,7 +63,19 @@ class Tests:
         actual3=functions.checkPerfectCube(1)
         assert actual3==expected3,"Expected to return 1 but returned something else."
 
-        
+    def test_getFactors(self):
+        """
+        Tests the auxiliary function getFactors that returns a list of factors of a given number.
+        """
+        result = functions.getFactors(8)
+        assert result == [1, 2, 4, 8]
+
+        result = functions.getFactors(15)
+        assert result == [1, 3, 5, 15]
+
+        result = functions.getFactors(13)
+        assert result == [1, 13]
+
     def test_add(self):
         """
         Tests the function add that returns sum of two numbers
@@ -124,8 +136,8 @@ class Tests:
         assert functions.modulus(1,100)==1, "Expected to return remainder but returned something else."
         assert functions.modulus(23,3)==2, "Expected to return remainder but returned something else."
     
-    @mock.patch('random.choice', side_effect=['add', 'subtract', 'multiply', 'divide', 'sqr_root', 'modulus', 'cube_root'])
-    @mock.patch('random.randint', side_effect=[5, 10, 15, 10, 4, 3, 20, 5, 16, 15, 4, 125])
+    @mock.patch('random.choice', side_effect=['add', 'subtract', 'multiply', 'divide', 5, 'sqr_root', 'modulus', 'cube_root'])
+    @mock.patch('random.randint', side_effect=[5, 10, 15, 10, 4, 3, 20, 16, 15, 4, 125])
     def test_generate_question(self, mock_choice, mock_int):
         """
         Tests the function generate_question that prompts the user with an arithmetic problem
