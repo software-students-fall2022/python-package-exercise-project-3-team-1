@@ -90,7 +90,7 @@ def generate_question():
             a=random.randint(1,100)
             sentinel=checkPerfectCube(a)
         ans = cube_root(a)
-        return question, a, b, ans
+        return question, a, ans
 
 
 def print_prompt(question, a, b):
