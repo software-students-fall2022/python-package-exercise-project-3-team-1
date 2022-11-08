@@ -39,10 +39,12 @@ class Tests:
         assert actual == expected,"Expected to return 11 but returned something else."
         expected2=-1
         actual2=functions.checkPerfectSquare(11)
+
         assert actual2==expected2,"Expected to return -1 but returned something else."
         expected3=1
         actual3=functions.checkPerfectSquare(1)
         assert actual3==expected3,"Expected to return 1 but returned something else."
+
     
     def test_checkPerfectCube(self):
         """
@@ -55,10 +57,12 @@ class Tests:
         assert actual == expected,"Expected to return 4 but returned something else."
         expected2=-1
         actual2=functions.checkPerfectCube(11)
+
         assert actual2==expected2,"Expected to return -1 but returned something else."
         expected3=1
         actual3=functions.checkPerfectCube(1)
         assert actual3==expected3,"Expected to return 1 but returned something else."
+
         
     def test_add(self):
         """

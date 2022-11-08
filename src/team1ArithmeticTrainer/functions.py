@@ -7,6 +7,8 @@ def checkPerfectSquare(num):
                 if i*j==num and i==j:
                     return i
     return -1
+
+
 def checkPerfectCube(num):
     if num>0:
         for i in range(num+1):
@@ -15,6 +17,8 @@ def checkPerfectCube(num):
                     if i*j*k==num and i==j and j==k:
                         return i
     return -1
+
+
 def add(a, b):
     return a + b
 
@@ -45,28 +49,28 @@ def modulus(a, b):
 
 def generate_question():
     """Generate a random question."""
-    question = random.choice([add, subtract, multiply, divide, sqr_root, modulus,cube_root])
-    if question == add:
+    question = random.choice(['add', 'subtract', 'multiply', 'divide', 'sqr_root', 'modulus', 'cube_root'])
+    if question == 'add':
         a = random.randint(1, 100)
         b = random.randint(1, 100)
         ans = add(a, b)
         return question, a, b, ans
-    elif question == subtract:
+    elif question == 'subtract':
         a = random.randint(1, 100)
         b = random.randint(1, 100)
         ans = subtract(a, b)
         return question, a, b, ans
-    elif question == multiply:
+    elif question == 'multiply':
         a = random.randint(1, 10)
         b = random.randint(1, 10)
         ans = multiply(a, b)
         return question, a, b, ans
-    elif question == divide:
+    elif question == 'divide':
         a = random.randint(1, 100)
         b = random.randint(1, 100)
         ans = divide(a, b)
         return question, a, b, ans
-    elif question == sqr_root:
+    elif question == 'sqr_root':
         a = random.randint(1, 100)
         sentinel=checkPerfectSquare(a)
         while sentinel==-1:
@@ -74,12 +78,12 @@ def generate_question():
             sentinel=checkPerfectSquare(a)
         ans = sqr_root(a)
         return question, a, ans
-    elif question == modulus:
+    elif question == 'modulus':
         a = random.randint(1, 100)
         b = random.randint(1, 100)
         ans = modulus(a, b)
         return question, a, b, ans
-    elif question == cube_root:
+    elif question == 'cube_root':
         a = random.randint(1, 100)
         sentinel=checkPerfectCube(a)
         while sentinel==-1:
@@ -91,20 +95,17 @@ def generate_question():
 
 def print_prompt(question, a, b):
     print("What is the answer to the following question?")
-    if question == add:
+    if question == "add":
         print(f"{a} + {b} = ")
-    elif question == subtract:
+    elif question == "subtract":
         print(f"{a} - {b} = ")
-    elif question == multiply:
+    elif question == "multiply":
         print(f"{a} * {b} = ")
-    elif question == divide:
+    elif question == "divide":
         print(f"{a} / {b} = ")
-    elif question == sqr_root:
+    elif question == "sqr_root":
         print(f"√{a} = ")
-    elif question == modulus:
+    elif question == "modulus":
         print(f"{a} % {b} = ")
-    elif question == cube_root:
-        print(f"∛{a} = ")
-
-
-
+    elif question == "cube_root":
+        print(f"x{a} = ")
