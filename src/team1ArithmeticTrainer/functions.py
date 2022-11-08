@@ -2,20 +2,17 @@ import random
 
 def checkPerfectSquare(num):
     if num>0:
-        for i in range(num+1):
-            for j in range(num+1):
-                if i*j==num and i==j:
-                    return i
+        for i in range(1, num+1):
+            if i*i==num:
+                return i
     return -1
 
 
 def checkPerfectCube(num):
     if num>0:
-        for i in range(num+1):
-            for j in range(num+1):
-                for k in range(num+1):
-                    if i*j*k==num and i==j and j==k:
-                        return i
+        for i in range(1, num+1):
+            if i*i*i==num:
+                return i
     return -1
 
 
@@ -90,7 +87,7 @@ def generate_question():
             a=random.randint(1,100)
             sentinel=checkPerfectCube(a)
         ans = cube_root(a)
-        return question, a, b, ans
+        return question, a, ans
 
 
 def print_prompt(question, a, b):
