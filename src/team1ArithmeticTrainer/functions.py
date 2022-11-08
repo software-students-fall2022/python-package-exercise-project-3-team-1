@@ -7,6 +7,8 @@ def checkPerfectSquare(num):
                 if i*j==num and i==j:
                     return i
     return -1
+
+
 def checkPerfectCube(num):
     if num>0:
         for i in range(num+1):
@@ -15,6 +17,8 @@ def checkPerfectCube(num):
                     if i*j*k==num and i==j and j==k:
                         return i
     return -1
+
+    
 def add(a, b):
     return a + b
 
@@ -105,6 +109,3 @@ def print_prompt(question, a, b):
         print(f"{a} % {b} = ")
     elif question == cube_root:
         print(f"∛{a} = ")
-
-
-

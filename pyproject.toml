@@ -10,7 +10,6 @@ authors = [
   { name="Kevin Gong", email="kxg202@nyu.edu" },
   { name="Dixit Timilsina", email="dt1930@nyu.edu" },
   { name="James Liu", email="sl7059@nyu.edu" },
-  { name="Jerry Chen", email="something@nyu.edu" }
 ]
 license = { file = "LICENSE" }
 readme = "README.md"
