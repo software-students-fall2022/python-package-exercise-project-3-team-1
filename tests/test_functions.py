@@ -126,7 +126,7 @@ class Tests:
     
     @mock.patch('random.choice', side_effect=['add', 'subtract', 'multiply', 'divide', 'sqr_root', 'modulus', 'cube_root'])
     @mock.patch('random.randint', side_effect=[5, 10, 15, 10, 4, 3, 20, 5, 16, 15, 4, 125])
-    def test_generate_question(mock_choice, mock_int):
+    def test_generate_question(self, mock_choice, mock_int):
         """
         Tests the function generate_question that prompts the user with an arithmetic problem
         """
@@ -170,7 +170,7 @@ class Tests:
         assert result[1] == 125
         assert result[2] == 5
 
-    def test_print_prompt(capfd):
+    def test_print_prompt(self, capfd):
         result = functions.print_prompt("add", 5, 10)
         out, err = capfd.readouterr()
         assert out == "What is the answer to the following question?\n5 + 10 = "

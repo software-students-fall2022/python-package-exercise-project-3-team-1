@@ -108,4 +108,4 @@ def print_prompt(question, a, b):
     elif question == "modulus":
         print(f"{a} % {b} = ")
     elif question == "cube_root":
-        print(f"x{a} = ")
+        print(f"∛{a} = ")
