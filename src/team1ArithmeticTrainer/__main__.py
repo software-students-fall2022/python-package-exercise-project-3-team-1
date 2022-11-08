@@ -1,9 +1,12 @@
-import functions as functions
+import team1ArithmeticTrainer.functions as functions
 def main():
     while True:
         question = functions.generate_question()
         functions.print_prompt(question[0], question[1], question[2])
-        ans = int(input("Enter Your Answer: "))
+        ans = input("Enter your answer: ")
+        while not (ans.isnumeric()):
+            print("You must enter an integer")
+            ans = input("Enter your answer: ")
         if ((question[0] == "sqr_root" or question[0] == "cube_root") and ans == question[2]):
             print("Correct")
         elif ((question[0] == "sqr_root" or question[0] == "cube_root") and ans != question[2]):
@@ -15,6 +18,7 @@ def main():
         again = input("Another question? (y/n): ")
         if(again != "y"):
             break
+
 
 if __name__ == "__main__":
     main()
