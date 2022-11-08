@@ -40,7 +40,7 @@ def sqr_root(a):
 
 
 def cube_root(a):
-    return a ** (1/3)
+    return round(a ** (1/3))
 
 
 def modulus(a, b):
