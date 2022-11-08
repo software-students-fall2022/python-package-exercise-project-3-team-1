@@ -1,5 +1,6 @@
 import pytest
 from team1ArithmeticTrainer import functions
+from unittest import mock
 
 class Tests:
     #
@@ -118,3 +119,78 @@ class Tests:
         assert functions.modulus(20,5)==0, "Expected to return remainder but returned something else."
         assert functions.modulus(1,100)==1, "Expected to return remainder but returned something else."
         assert functions.modulus(23,3)==2, "Expected to return remainder but returned something else."
+    
+    @mock.patch('random.choice', side_effect=['add', 'subtract', 'multiply', 'divide', 'sqr_root', 'modulus', 'cube_root'])
+    @mock.patch('random.randint', side_effect=[5, 10, 15, 10, 4, 3, 20, 5, 16, 15, 4, 125])
+    def test_generate_question(mock_choice, mock_int):
+        """
+        Tests the function generate_question that prompts the user with an arithmetic problem
+        """
+        result = functions.generate_question()
+        assert result[0] == "add"
+        assert result[1] == 5
+        assert result[2] == 10
+        assert result[3] == 15
+
+        result = functions.generate_question()
+        assert result[0] == "subtract"
+        assert result[1] == 15
+        assert result[2] == 10
+        assert result[3] == 5
+
+        result = functions.generate_question()
+        assert result[0] == "multiply"
+        assert result[1] == 4
+        assert result[2] == 3
+        assert result[3] == 12
+
+        result = functions.generate_question()
+        assert result[0] == "divide"
+        assert result[1] == 20
+        assert result[2] == 5
+        assert result[3] == 4
+
+        result = functions.generate_question()
+        assert result[0] == "sqr_root"
+        assert result[1] == 16
+        assert result[2] == 4
+
+        result = functions.generate_question()
+        assert result[0] == "modulus"
+        assert result[1] == 15
+        assert result[2] == 4
+        assert result[3] == 3
+
+        result = functions.generate_question()
+        assert result[0] == "cube_root"
+        assert result[1] == 125
+        assert result[2] == 5
+
+    def test_print_prompt(capfd):
+        result = functions.print_prompt("add", 5, 10)
+        out, err = capfd.readouterr()
+        assert out == "What is the answer to the following question?\n5 + 10 = "
+
+        result = functions.print_prompt("subtract", 10, 5)
+        out, err = capfd.readouterr()
+        assert out == "What is the answer to the following question?\n10 - 5 = "
+
+        result = functions.print_prompt("multiply", 3, 4)
+        out, err = capfd.readouterr()
+        assert out == "What is the answer to the following question?\n3 * 4 = "
+
+        result = functions.print_prompt("divide", 10, 5)
+        out, err = capfd.readouterr()
+        assert out == "What is the answer to the following question?\n10 / 5 = "
+
+        result = functions.print_prompt("sqr_root", 25, 2)
+        out, err = capfd.readouterr()
+        assert out == "What is the answer to the following question?\n√25 = "
+
+        result = functions.print_prompt("modulus", 15, 4)
+        out, err = capfd.readouterr()
+        assert out == "What is the answer to the following question?\n15 % 4 = "
+
+        result = functions.print_prompt("cube_root", 125, 2)
+        out, err = capfd.readouterr()
+        assert out == "What is the answer to the following question?\n∛125 = "
