@@ -114,4 +114,4 @@ While working on the package code, and verifying it behaves as expected, it can 
 
 ## Link to Package on PyPi
 
-[Arithmetic Trainer](https://pypi.org/project/arithmeticTrainer/0.0.7/)
+[Arithmetic Trainer](https://pypi.org/project/arithmeticTrainer/)

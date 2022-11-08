@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "arithmeticTrainer"
 description = "A package meant to train mental math and basic arithmetic"
-version = "0.0.7"
+version = "0.0.1"
 authors = [
   { name="Kevin Gong", email="kxg202@nyu.edu" },
   { name="Dixit Timilsina", email="dt1930@nyu.edu" },
