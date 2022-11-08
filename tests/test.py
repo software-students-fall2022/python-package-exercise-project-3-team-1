@@ -61,7 +61,7 @@ class Tests:
         
     def test_add(self):
         """
-        Tests the auxiliary function add that returns sum of two numbers
+        Tests the function add that returns sum of two numbers
         """
         assert functions.add(20,1)==21, "Expected to return sum but returned something else."
         assert functions.add(1,100)==101, "Expected to return sum but returned something else."
@@ -69,7 +69,7 @@ class Tests:
         
     def test_subtract(self):
         """
-        Tests the auxiliary function subtract that returns difference of two numbers
+        Tests the function subtract that returns difference of two numbers
         """
         assert functions.subtract(20,1)==19, "Expected to return difference but returned something else."
         assert functions.subtract(1,1)==0, "Expected to return difference but returned something else."
@@ -77,7 +77,7 @@ class Tests:
     
     def test_multiply(self):
         """
-        Tests the auxiliary function multiply that returns product of two numbers
+        Tests the function multiply that returns product of two numbers
         """
         assert functions.multiply(20,1)==20, "Expected to return product but returned something else."
         assert functions.multiply(1,0)==0, "Expected to return product but returned something else."
@@ -85,7 +85,7 @@ class Tests:
     
     def test_divide(self):
         """
-        Tests the auxiliary function divide that returns quotient when
+        Tests the function divide that returns quotient when
         one number is divided by another number
         """
         assert functions.divide(20,5)==4, "Expected to return quotient but returned something else."
@@ -94,7 +94,7 @@ class Tests:
     
     def test_sqr_root(self):
         """
-        Tests the auxiliary function sqr_root that returns square root of a
+        Tests the function sqr_root that returns square root of a
         number
         """
         assert functions.sqr_root(36)==6, "Expected to return square root but returned something else."
@@ -103,7 +103,7 @@ class Tests:
     
     def test_cube_root(self):
         """
-        Tests the auxiliary function cube_root that returns cube root of a
+        Tests the function cube_root that returns cube root of a
         number
         """
         assert functions.cube_root(8)==2, "Expected to return cube root but returned something else."
@@ -112,7 +112,7 @@ class Tests:
     
     def test_modulus(self):
         """
-        Tests the auxiliary function add that returns remainder when one
+        Tests the function modulus that returns remainder when one
         number is divided by another
         """
         assert functions.modulus(20,5)==0, "Expected to return remainder but returned something else."
