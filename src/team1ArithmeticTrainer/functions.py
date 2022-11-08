@@ -1,6 +1,20 @@
 import random
 
-
+def checkPerfectSquare(num):
+    if num>0:
+        for i in range(num+1):
+            for j in range(num+1):
+                if i*j==num and i==j:
+                    return i
+    return -1
+def checkPerfectCube(num):
+    if num>0:
+        for i in range(num+1):
+            for j in range(num+1):
+                for k in range(num+1):
+                    if i*j*k==num and i==j and j==k:
+                        return i
+    return -1
 def add(a, b):
     return a + b
 
@@ -31,7 +45,7 @@ def modulus(a, b):
 
 def generate_question():
     """Generate a random question."""
-    question = random.choice([add, subtract, multiply, divide, sqr_root, modulus])
+    question = random.choice([add, subtract, multiply, divide, sqr_root, modulus,cube_root])
     if question == add:
         a = random.randint(1, 100)
         b = random.randint(1, 100)
@@ -54,12 +68,24 @@ def generate_question():
         return question, a, b, ans
     elif question == sqr_root:
         a = random.randint(1, 100)
+        sentinel=checkPerfectSquare(a)
+        while sentinel==-1:
+            a=random.randint(1,100)
+            sentinel=checkPerfectSquare(a)
         ans = sqr_root(a)
         return question, a, ans
     elif question == modulus:
         a = random.randint(1, 100)
         b = random.randint(1, 100)
         ans = modulus(a, b)
+        return question, a, b, ans
+    elif question == cube_root:
+        a = random.randint(1, 100)
+        sentinel=checkPerfectCube(a)
+        while sentinel==-1:
+            a=random.randint(1,100)
+            sentinel=checkPerfectCube(a)
+        ans = cube_root(a)
         return question, a, b, ans
 
 
@@ -77,6 +103,8 @@ def print_prompt(question, a, b):
         print(f"√{a} = ")
     elif question == modulus:
         print(f"{a} % {b} = ")
+    elif question == cube_root:
+        print(f"∛{a} = ")
 
 
 
