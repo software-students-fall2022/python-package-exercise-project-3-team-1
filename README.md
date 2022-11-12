@@ -50,12 +50,14 @@ functions.modulus(27, 5)
 ```
 ### checkPerfectSquare(num)
 The checkPerfectSquare function takes in one number (num) and checks if it is a perfect square.
+If a perfect square is found, the least value among all valid is returned. If no perfect square is found or input is negative, -1 is returned.
 ```python
 from team1ArithmeticTrainer import functions
 functions.checkPerfectSquare(16)
 ```
 ### checkPerfectCube(num)
 The checkPerfectCube function takes in one number (num) and checks if it is a perfect cube.
+If a perfect cube is found, the least value among all valid candidate is returned. If no perfect cube is found or input is negative, -1 is returned.
 ```python
 from team1ArithmeticTrainer import functions
 functions.checkPerfectCube(125)
