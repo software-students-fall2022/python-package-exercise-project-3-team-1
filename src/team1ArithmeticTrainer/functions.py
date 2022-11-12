@@ -1,7 +1,9 @@
 import random
 
 def checkPerfectSquare(num):
-    if num>0:
+    if num == 0:
+        return 0
+    if num0:
         for i in range(1, num+1):
             if i*i==num:
                 return i
@@ -9,6 +11,8 @@ def checkPerfectSquare(num):
 
 
 def checkPerfectCube(num):
+    if num == 0:
+        return 0
     if num>0:
         for i in range(1, num+1):
             if i*i*i==num:
@@ -17,7 +21,7 @@ def checkPerfectCube(num):
 
 def getFactors(num):
     factors = []
-    if num>0:
+    if num>=0:
         for i in range(1, num+1):
             if num % i == 0:
                 factors.append(i)
