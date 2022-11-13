@@ -81,10 +81,10 @@ def generate_question():
         return question, a, b, ans
     elif question == 'sqr_root':
         a = random.randint(1, 100)
-        sentinel=checkPerfectSquare(a)
-        while sentinel==-1:
-            a=random.randint(1,100)
-            sentinel=checkPerfectSquare(a)
+        sentinel = checkPerfectSquare(a)
+        while sentinel == -1:
+            a = random.randint(1, 100)
+            sentinel = checkPerfectSquare(a)
         ans = sqr_root(a)
         return question, a, ans
     elif question == 'modulus':
@@ -94,10 +94,10 @@ def generate_question():
         return question, a, b, ans
     elif question == 'cube_root':
         a = random.randint(1, 100)
-        sentinel=checkPerfectCube(a)
-        while sentinel==-1:
-            a=random.randint(1,100)
-            sentinel=checkPerfectCube(a)
+        sentinel = checkPerfectCube(a)
+        while sentinel == -1:
+            a = random.randint(1, 100)
+            sentinel = checkPerfectCube(a)
         ans = cube_root(a)
         return question, a, ans
 
