@@ -1,6 +1,8 @@
 import random
 
 def checkPerfectSquare(num):
+    if num == 0:
+        return 0
     if num>0:
         for i in range(1, num+1):
             if i*i==num:
@@ -9,6 +11,8 @@ def checkPerfectSquare(num):
 
 
 def checkPerfectCube(num):
+    if num == 0:
+        return 0
     if num>0:
         for i in range(1, num+1):
             if i*i*i==num:
@@ -17,7 +21,7 @@ def checkPerfectCube(num):
 
 def getFactors(num):
     factors = []
-    if num>0:
+    if num>=0:
         for i in range(1, num+1):
             if num % i == 0:
                 factors.append(i)
@@ -77,10 +81,10 @@ def generate_question():
         return question, a, b, ans
     elif question == 'sqr_root':
         a = random.randint(1, 100)
-        sentinel=checkPerfectSquare(a)
-        while sentinel==-1:
-            a=random.randint(1,100)
-            sentinel=checkPerfectSquare(a)
+        sentinel = checkPerfectSquare(a)
+        while sentinel == -1:
+            a = random.randint(1, 100)
+            sentinel = checkPerfectSquare(a)
         ans = sqr_root(a)
         return question, a, ans
     elif question == 'modulus':
@@ -90,10 +94,10 @@ def generate_question():
         return question, a, b, ans
     elif question == 'cube_root':
         a = random.randint(1, 100)
-        sentinel=checkPerfectCube(a)
-        while sentinel==-1:
-            a=random.randint(1,100)
-            sentinel=checkPerfectCube(a)
+        sentinel = checkPerfectCube(a)
+        while sentinel == -1:
+            a = random.randint(1, 100)
+            sentinel = checkPerfectCube(a)
         ans = cube_root(a)
         return question, a, ans
 

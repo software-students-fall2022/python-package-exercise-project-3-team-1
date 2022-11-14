@@ -50,18 +50,38 @@ functions.modulus(27, 5)
 ```
 ### checkPerfectSquare(num)
 The checkPerfectSquare function takes in one number (num) and checks if it is a perfect square.
+If a perfect square is found, the least value among all valid is returned. If no perfect square is found or input is negative, -1 is returned.
 ```python
 from team1ArithmeticTrainer import functions
 functions.checkPerfectSquare(16)
 ```
 ### checkPerfectCube(num)
 The checkPerfectCube function takes in one number (num) and checks if it is a perfect cube.
+If a perfect cube is found, the least value among all valid candidate is returned. If no perfect cube is found or input is negative, -1 is returned.
 ```python
 from team1ArithmeticTrainer import functions
 functions.checkPerfectCube(125)
 ```
 ### generate_question()
 The generate_question function generates a random arithmetic question choosing either an addition, subtraction, multiplication, division, sqr root, modulus, or cube root problem.
+If not specified, the function returns four values
+- question: question type from 'add', 'subtract', 'multiply', 'divide', 'sqr_root', 'modulus', 'cube_root'
+- a: a random integer from 1 to 100 inclusive
+- b: a random integer from 1 to 100 inclusive
+- ans: the correct ans of this question
+#### Return values specification: 
+- 'subtract'
+  - value b will always be less than a
+- 'multiply'
+  - both a and b will be a random integer from 1 to 10 inclusive
+- 'divide'
+  - value b will be ensured to be a factor of a
+- 'sqr_root'
+  - returns only three values that contains question, a, and ans. 
+    - a: random integer from 1 to 100 inclusive
+- 'cube_root'
+  - returns only three values that contains question, a, and ans. 
+    - a: random integer from 1 to 100 inclusive
 ```python
 from team1ArithmeticTrainer import functions
 functions.generate_question()
@@ -95,7 +115,7 @@ Simple example unit tests are included within the `tests` directory. To run thes
 
 1. Install pytest in a virtual environment.
 1. Run the tests from the main project directory: `python3 -m pytest`.
-1. Tests should never fail. Any failed tests indicate that the production code is behaving differently from the behavior the tests expect.
+1.  Tests should never fail. Any failed tests indicate that the production code is behaving differently from the behavior the tests expect.
 
 ## Pro tip
 
